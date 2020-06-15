@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Connectez-vous pour enregistrer vos scores !" />
+  <meta name="keywords" content="Donald Trump, Trump, idle game, jeu de strtégie" />
+  <meta name="author" content="Akim Langlois" />
+
+  <meta property="og:url" content="http://trumpstakeover.1950161.420s24.online/login.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="TTO - Jeu" />
+  <meta property="og:description"
+    content="Aidez le BOSS à conquérir le monde dans ce nouveau jeu de stratégie palpitant !!!" />
+  <meta property="og:image" content="css/images/ogImg.png" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="css/images/favicon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="css/images/favicon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="css/images/favicon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="css/images/favicon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="css/images/favicon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="css/images/favicon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="css/images/favicon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="css/images/favicon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="css/images/favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="css/images/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="css/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="css/images/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="css/images/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="310x310" href="css/images/favicon/ms-icon-310x310.png" />
+  <link rel="manifest" href="css/images/favicon/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <link href="css/BGandNav.css" rel="stylesheet" type="text/css" />
+  <link href="css/login.css" rel="stylesheet" type="text/css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163779063-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-163779063-1");
+  </script>
+  <title>TTO - Login</title>
+</head>
+
+<body onload="onLoad()">
+  <a href="#maincontent" class="mainContentLink">Aller au contenu</a>
+  <header>
+    <div class="header" role="heading">
+      <div class="brownBox" role="banner">
+        <a href="index.html">
+          <img src="css/images/trump.png" id="img" alt="" class="home"  title="Page d'accueil"/>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <noscript>
+    Vous devez activer JavaScript pour utiliser cette page.
+  </noscript>
+  <div class="grid" role="main">
+    <div role="navigation">
+      <nav id="nav" class="nav">
+        <ul>
+          <li>
+            <a href="javascript:delay('histoire.html')" class="nonActiveNav">HISTOIRE</a>
+          </li>
+          <li>
+            <a href="javascript:delay('login.html')" class="activeNav">LOGIN</a>
+          </li>
+          <li>
+            <a href="javascript:delay('index.html')" class="nonActiveNav">JOUER</a>
+          </li>
+          <li>
+            <a href="javascript:delay('faq.html')" class="nonActiveNav">COMMENT JOUER</a>
+          </li>
+          <li>
+            <a href="javascript:delay('forum.html')" class="nonActiveNav">FORUM</a>
+          </li>
+          <li>
+            <a href="javascript:delay('leaderboard.html')" class="nonActiveNav">TABLEAU DES SCORES</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main id="maincontent">
+      <div class="divParagraphe" id="divLogin" role="form">
+        <h1>LOGIN</h1>
+        <form class="formulaire" action="login.html"  autocomplete="on">
+          <div class="formLine">
+            <label for="nom">Identifiant:</label>
+            <input type="text" class="textBox" id="nom" name="nom" aria-label="identifiant" />
+        </div>
+        <div class="formLine">
+          <label for="mdp">Mot de passe:</label>
+          <input type="password" class="textBox" id="mdp" name="mot de passe" aria-label="mot de passe" />
+        </div>
+          <input type="submit" class="buttonSend" value="Connexion" aria-label="connexion" />
+        </form>
+        <button type="submit" class="buttonSend" id="btnPopup">
+          Créer compte
+        </button>
+
+        <div class="popupBg" id="popupBg" role="alertdialog">
+          <span class="helper" role="separator"></span>
+          <div>
+            <div class="popupCloseButton" id="btnClose" role="button">&times;</div>
+            <form class="formulaire" action="login.html" autocomplete="on">
+              <div class="divFormulaire" role="form">
+                <label for="identifiant">Identifiant:</label> &emsp;
+                <input type="text" class="textBox textBox2" id="identifiant" name="identifiant"
+                  aria-label="identifiant" /><br /><br />
+                <label for="email">Adresse Email:</label>&nbsp;&nbsp;
+                <input type="email" class="textBox textBox2" id="email" name="email" aria-label="email" /><br /><br />
+                <label for="mdpCreate">Mot de passe:</label> &emsp;
+                <input type="password" class="textBox textBox2" id="mdpCreate" name="mot de passe"
+                  aria-label="mot de passe" /><br /><br />
+                <label for="mdpCreateCheck">Confirmer le mot de passe:</label>&nbsp;&nbsp;
+                <input type="password" class="textBox textBox2" id="mdpCreateCheck" name="mod de passe verification"
+                  aria-label="confirmer mot de passe" /><br /><br />
+              </div>
+              <input type="submit" id="btnCreer" class="buttonSend" value="Créer" aria-label="créer" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="footer">Akim Denommé Lanlois &copy; 2020</footer>
+  <script src="js/login.js?v=1"></script>
+</body>
+
+</html>

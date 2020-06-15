@@ -1,0 +1,713 @@
+/* contenu */
+div.grid {
+	grid-gap: 2vw;
+	grid-template-columns: 4fr 4fr 8fr;
+	margin-right: 25px;
+}
+
+div.grid > div:nth-child(5) {
+	grid-column: 2/4;
+	grid-row: 2/4;
+}
+
+.divJoueur,
+.divTableau {
+	animation-duration: 0.7s;
+	animation-name: gridAnim;
+	background-color: black;
+	border: 4px solid white;
+	border-radius: 15px;
+	color: white;
+}
+
+.divJoueur {
+	padding: 10px 10px 0 10px;
+}
+
+.divTableau {
+	padding: 5px;
+}
+
+div.statsJoueur {
+	display: grid;
+	grid-template-columns: auto auto;
+	height: 45%;
+	text-align: center;
+	width: 100%;
+}
+
+div.divImgJoueur {
+	display: flex;
+	margin-bottom: 2vh;
+}
+
+div.statsJoueur > p:nth-child(even) {
+	text-align: right;
+}
+
+div.statsJoueur > p:nth-child(odd) {
+	text-align: left;
+}
+
+div.statsJoueur > p {
+	margin: 0;
+	padding: 0;
+}
+
+div.buttonJoueur {
+	display: flex;
+	justify-content: space-around;
+}
+
+div.buttonJoueur > button {
+	background: #002868;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+	color: white;
+	font-family: "courier new";
+	font-size: 0.9em;
+	font-weight: bold;
+	margin: auto;
+	padding: 7px;
+	transition: 150ms;
+	width: 30%;
+}
+
+div.buttonJoueur > button:hover {
+	background: white;
+	box-shadow: 0 0 18px rgba(255, 255, 255);
+	color: black;
+}
+
+.divRessource,
+.divInventaire {
+	display: grid;
+	grid-gap: 1.5em;
+	grid-template-columns: auto auto;
+}
+
+.divRessource {
+	animation-duration: 0.6s;
+	animation-name: gridAnim;
+	margin-left: 7vw;
+}
+
+.divInventaire {
+	animation-duration: 0.5s;
+	animation-name: nav;
+	bottom: 60px;
+	height: 280px;
+	left: 40px;
+	position: fixed;
+	width: 270px;
+}
+
+div.divInventaire > img {
+	margin: auto;
+}
+
+/* div tableau */
+table.tableau {
+	border: 1px solid white;
+	border-radius: 15px 15px 0 0;
+	height: 60%;
+	text-align: left;
+	width: 100%;
+}
+
+table.tableau > tbody {
+	font-size: 0.75em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+table.tableau tr:nth-child(even) {
+	background-color: white;
+	color: black;
+}
+
+th {
+	background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 110%;
+}
+
+th:first-child {
+	border-radius: 10px 0 0 0;
+	padding: 0 0 0 5px;
+}
+
+th:last-child {
+	border-radius: 0 10px 0 0;
+	padding-right: 6px;
+}
+
+div.tableauButton {
+	display: flex;
+	height: 40%;
+	justify-content: space-around;
+}
+
+h2 {
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.imgTableau {
+	border: 2px solid white;
+	display: block;
+	height: 35px;
+	margin: auto;
+	width: 35px;
+}
+
+div.divImgTableau {
+	display: flex;
+	justify-content: space-between;
+	width: 20%;
+}
+
+button.buttonPlay {
+	margin-left: -10px;
+}
+
+button.buttonPlay,
+button.buttonPause {
+	background-color: #002868;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border: 2px solid white;
+	box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+	color: transparent;
+	height: 30px;
+	transition: 150ms;
+	transition: 200ms;
+	width: 50%;
+}
+
+button.buttonPlay:hover,
+button.buttonPause:hover {
+	background: white;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	box-shadow: 0 0 18px rgba(255, 255, 255);
+}
+
+button.buttonPlay {
+	background-image: url("images/playImgWhite.png");
+	border-radius: 10px 0 0 10px;
+}
+
+button.buttonPlay:hover {
+	background-image: url("images/playImg.png");
+}
+
+button.buttonPause {
+	background-image: url("images/pauseImgWhite.png");
+	border-radius: 0 10px 10px 0;
+}
+
+button.buttonPause:hover {
+	background-image: url("images/pauseImg.png");
+}
+
+div.divButtonWar {
+	height: 100%;
+	margin-right: -20px;
+	width: 30%;
+}
+
+div.divButtonWar > button {
+	background-color: #9e0000;
+	border-radius: 10px;
+	box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+	color: white;
+	font-family: "courier new";
+	font-size: 2em;
+	font-weight: bold;
+	height: 80%;
+	margin-top: 10px;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0);
+	width: 90%;
+}
+
+div.divButtonWar > button:hover {
+	background-image: url("images/usaIcon.png");
+	background-size: cover;
+	box-shadow: 0 0 18px rgba(255, 255, 255);
+	color: black;
+	text-shadow: 4px 4px 4px rgba(255, 255, 255);
+}
+
+caption {
+	height: 1px;
+	overflow: hidden;
+	width: 1px;
+}
+
+/* ressources */
+div.divRessource > div {
+	border-radius: 30px;
+	height: 100%;
+	margin-bottom: 6em;
+	padding: 0 20px;
+	width: 70%;
+}
+
+div.ressourceArgent {
+	background-color: #b87333;
+}
+
+div.ressourceArgent > label {
+	background-color: #b87333;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+}
+
+div.ressourceArgent > label:hover {
+	background-color: #e09b65;
+	box-shadow: 0 0 18px rgba(0, 0, 0);
+}
+
+div.ressourcePopularite {
+	background-color: #c0c0c0;
+}
+
+div.ressourcePopularite > label {
+	background-color: #c0c0c0;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+}
+
+div.ressourcePopularite > label:hover {
+	background-color: #e8e8e8;
+	box-shadow: 0 0 18px rgba(0, 0, 0);
+}
+
+div.ressourceProblemes {
+	background-color: #e5c14c;
+}
+
+div.ressourceProblemes > label {
+	background-color: #e5c14c;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+}
+
+div.divRessource > div > input[type='radio'] {
+	display:none;
+}
+
+div.divRessource > div > input:checked + label {
+	background:#9e0000;
+} 
+
+div.divRessource > div > input:checked +  label {
+	color: white;
+}
+
+div.ressourceProblemes > label:hover {
+	background-color: #ffe96a;
+	box-shadow: 0 0 18px rgba(0, 0, 0);
+}
+
+div.ressourceBonus {
+	background-color: #efffff;
+}
+
+div.ressourceBonus > label {
+	background-color: #efffff;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+}
+
+div.ressourceBonus > label:hover {
+	background-color: #ffffff;
+	box-shadow: 0 0 18px rgba(0, 0, 0);
+}
+
+div.statsRessource {
+	display: grid;
+	font-weight: bold;
+	grid-template-columns: auto auto;
+}
+
+div.statsRessource > p:nth-child(even) {
+	text-align: right;
+}
+
+p.titre {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+div.progress {
+	border: 1px solid black;
+	border-radius: 3px;
+	height: 10%;
+	margin: 16px auto auto auto;
+	width: 80%;
+}
+
+.buttonRessource {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid black;
+	border-radius: 15px;
+	font-family: "courier new";
+	font-size: 1.2em;
+	font-weight: bold;
+	height: 45px;
+	margin: 20px auto -50px auto;
+	width: 70%;
+}
+
+hr {
+	border: 1px solid black;
+}
+
+div.progressBarArgent,
+.bronzeBg {
+	background-color: #b87333;
+}
+
+div.progressBarPop,
+.silverBg {
+	background-color: #666666;
+}
+
+div.progressBarProb,
+.goldBg {
+	background-color: #d1b038;
+}
+
+div.progressBarBonus,
+.platinumBg {
+	background-color: #9b9baf;
+}
+
+.progressBarArgent,
+.progressBarPop,
+.progressBarProb,
+.progressBarBonus {
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-name: progres, progress-bar-stripes;
+	animation-timing-function: linear;
+	animation-play-state: paused;
+	background-image: linear-gradient( 45deg, rgba(255, 255, 255, 0.35) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.35) 75%, transparent 75%, transparent);
+	background-size: 40px 40px;
+	border-radius: 3px;
+	height: 100%;
+	position: relative;
+}
+@keyframes progres {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
+@keyframes progress-bar-stripes {
+	from {
+		background-position: 40px 0;
+	}
+	to {
+		background-position: 0 0;
+	}
+}
+
+/* popups */
+.divObjetShop {
+	display: flex;
+}
+
+.divObjetShop > p {
+	color: white;
+	margin: 15px 25px;
+	width: 70%;
+}
+
+.divObjetShop > img {
+	background-color: black;
+	border: 1px solid white;
+	border-radius: 50px;
+	height: 80%;
+	margin: auto;
+}
+
+.buttonBuyObjet {
+	background-color: #002868;
+	border: 1px solid white;
+	border-radius: 8px;
+	box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+	color: white;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.8em;
+	height: 30%;
+	letter-spacing: 0.2em;
+	margin: auto;
+	padding: 15px;
+	text-shadow: 1px 1px black;
+	width: 100px;
+}
+
+.buttonBuyObjet:hover {
+	background-color: white;
+	box-shadow: 0 0 18px rgba(255, 255, 255);
+	color: black;
+	cursor: pointer;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.popupBg > div > hr {
+	border: 1px solid white;
+	width: 70%;
+}
+
+.positionBottom {
+	height: 400px;
+	overflow: auto;
+}
+
+.statsPopupXp {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.divXpRessource {
+	display: flex;
+	width: 105%;
+}
+
+.xpResArgent {
+	border-right: 1px solid white;
+	color: #B87333;
+}
+
+.xpResPopularite {
+	border-right: 1px solid white;
+	color: #C0C0C0;
+}
+
+.xpResProblemes {
+	border-right: 1px solid white;
+	color: #e5c14c;
+}
+
+.xpResBonus {
+	color: #efffff;
+}
+
+.xpRes {
+	font-size: 0.8em;
+}
+
+.divPtsXp {
+	align-items: center;
+	border-radius: 10px;
+	display: grid;
+	font-weight: 600;
+	grid-gap: 1px 2px;
+	grid-template-columns: 1fr 3fr 1fr 1fr;
+	height: 300px;
+	justify-content: center;
+	padding-left: 10px;
+}
+
+.gridBottom {
+	display: grid;
+	grid-gap: 2em;
+	grid-template-columns: auto auto;
+	height: 100%;
+}
+
+.gridBottom > div:nth-child(7),
+.gridBottom > div:last-child {
+	margin-bottom: 2em;
+}
+
+.gridBottom > div:nth-child(2),
+.gridBottom > div:first-child {
+	margin-top: 1em;
+}
+
+.plus-button {
+	border: 2px solid black;
+	border-radius: 999px;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+	font-size: 16px;
+	height: 2em;
+	position: relative;
+	transition: 200ms;
+	width: 2em;
+}
+
+.plus-button:hover {
+	background-color: rgba(255, 255, 255);
+	border: none;
+	box-shadow: 0 0 40px rgba(255, 255, 255);
+}
+
+.plus-button:after,
+.plus-button:before {
+	background-color: black;
+	content: "";
+	display: block;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.plus-button:before {
+	height: 1em;
+	width: 0.2em;
+}
+
+.plus-button:after {
+	height: 0.2em;
+	width: 1em;
+}
+
+.fontSizeXpCost {
+	font-size: 1.2em;
+}
+
+.xpTierBg {
+	background-color: white;
+	border-radius: 50px;
+	box-shadow: 0 0 1px black;
+}
+
+/* animation out */
+.divInventaireOut {
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-name: navOut;
+}
+
+.divRessourceOut {
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+	animation-name: gridAnimOut;
+}
+
+.divTableauOut {
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+	animation-name: gridAnimOut;
+}
+
+.divJoueurOut {
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+	animation-name: gridAnimOut;
+}
+
+/* media queries */
+@media only screen and (max-width: 1300px), (max-height: 750px) {
+	.nav,
+	 .navOut,
+	 .home,
+	 .imgOut,
+	 .divJoueur,
+	 .divJoueurOut,
+	 .divTableau,
+	 .divTableauOut,
+	 .divRessource,
+	 .divRessourceOut,
+	 .divInventaire,
+	 .divInventaireOut {
+		animation: none;
+	}
+
+	.divInventaire,
+	 .divTableau,
+	 .divJoueur {
+		margin: auto;
+		width: 80%;
+	}
+
+	.divTableau,
+	 .divJoueur {
+		margin-top: 2em;
+	}
+
+	.divInventaire {
+		grid-template-columns: auto auto auto auto;
+		height: 180px;
+		left: 0;
+		margin-top: 5em;
+		position: relative;
+	}
+
+	.divRessource {
+		display: block;
+		margin: auto;
+	}
+
+	div.divRessource > div {
+		height: 310px;
+		margin: auto;
+		margin-bottom: 3em;
+		padding-top: 7px;
+		width: 75%;
+	}
+
+	th {
+		font-size: 0.7em;
+	}
+
+	div.divButtonWar {
+		height: 40px;
+		margin-top: 7px;
+	}
+
+	div.divButtonWar > button {
+		font-size: 0.8em;
+	}
+
+	.divJoueur {
+		padding-bottom: 5px;
+	}
+}
+
+@media only screen and (max-width: 355px) {
+	table {
+		font-size: 0.7em;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	div.divRessource > div {
+		height: 350px;
+	}
+}
+
+@media only screen and (max-height: 850px) {
+	.divInventaire {
+		grid-template-columns: auto auto auto auto;
+		height: 180px;
+	}
+}
+
+@media only screen and (max-height: 750px) {
+	div.grid {
+		display: contents;
+		min-height: 100vh;
+		width: 100%;
+	}
+
+	.nav,
+	 .home,
+	 .brownBox,
+	 .divInventaire {
+		position: relative;
+	}
+}

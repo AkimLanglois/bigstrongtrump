@@ -1,0 +1,157 @@
+/* contenu */
+.divParagraphe {
+	height: 110%;
+	min-height: 280px;
+	padding: 10px 20px 0 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1 {
+	margin: 8px;
+}
+
+form.formulaire {
+	display: grid;
+	grid-auto-rows: 10fr 1fr;
+	height: 80%;
+	margin: auto;
+	width: 90%;
+}
+
+.textBox {
+	border-radius: 10px;
+	height: 130px;
+	margin: auto;
+	margin-bottom: 1em;
+	padding: 0 5px;
+	resize: none;
+	width: 85%;
+}
+
+label {
+	height: 15px;
+}
+
+input.button1 {
+	background: #002868;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+	color: white;
+	font-family: "courier new";
+	font-size: 0.9em;
+	font-weight: bold;
+	margin: auto;
+	margin-bottom: 30px;
+	padding: 7px;
+	transition: 200ms;
+	width: 50%;
+}
+
+input.button1:hover {
+	background: white;
+	box-shadow: 0 0 18px rgba(255, 255, 255);
+	color: black;
+}
+
+.divForum {
+	animation-duration: 0.7s;
+	animation-name: gridAnim;
+	animation-timing-function: ease-out;
+	display: grid;
+	grid-gap: 1em 0.2em;
+	grid-template-columns: 4fr 1fr;
+	height: 100%;
+	margin: 2em 0 60px 0;
+	overflow: auto;
+	padding: 0 1em;
+	width: 100%;
+}
+
+div.divForum > div {
+	border: 2px solid white;
+	height: 100px;
+	overflow: auto;
+	padding: 5px;
+}
+
+div.divForum > div:first-child,
+div.divForum > div:nth-child(2) {
+	margin-top: 1em;
+}
+
+div.divForum > div:last-child,
+div.divForum > div:nth-child(7) {
+	margin-bottom: 1em;
+}
+
+div.divForum > div:nth-child(even) {
+	align-items: center;
+	border-radius: 0 10px 10px 0;
+	display: inline-grid;
+	justify-items: center;
+}
+
+div.divForum > div:nth-child(odd) {
+	border-radius: 10px 0 0 10px;
+}
+
+/* animation out */
+.divForumOut {
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+	animation-name: gridAnimOut;
+}
+
+.divParagrapheOut {
+	animation-duration: 700ms;
+	animation-fill-mode: forwards;
+	animation-name: gridAnimOut;
+}
+
+/* media queries */
+@media only screen and (max-width: 1300px), (max-height: 750px) {
+	.nav,
+	 .navOut,
+	 .home,
+	 .imgOut,
+	 .divParagraphe,
+	 .divParagrapheOut,
+	 .divForum,
+	 .divForumOut {
+		animation: none;
+	}
+
+	div.divParagraphe,
+	 div.divForum {
+		width: 70%;
+	}
+
+	div.divForum {
+		margin: auto;
+		margin-bottom: 3em;
+	}
+
+	div.divParagraphe {
+		height: 300px;
+	}
+
+	div.divForum > div:nth-child(2) {
+		margin-top: 18px;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+  div.divForum {
+    width: 85%;
+  }
+  
+div.divForum > div:nth-child(even) {
+	font-size: 0.6em;
+	overflow-x: hidden;
+	padding-left: 70px;
+	vertical-align: top;
+	writing-mode: vertical-rl;
+	}
+}

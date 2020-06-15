@@ -1,0 +1,403 @@
+/* html */
+html,
+body {
+	font-family: "courier new";
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+html {
+	background: url("images/backgroundImg.jpg") center center fixed;
+	background-attachment: scroll;
+	background-position-y: 150px;
+	background-size: cover;
+	overflow-x: hidden;
+}
+
+body {
+	padding-bottom: 80px;
+}
+
+button {
+	outline: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:focus {
+	outline: 3px solid red;
+}
+
+a:focus {
+	outline: 3px solid red;
+}
+
+textarea:focus {
+	outline: 3px solid red;
+}
+
+input:focus {
+	outline: 3px solid red;
+}
+
+/* header */
+.home {
+	animation-duration: 0.5s;
+	animation-name: img;
+	animation-timing-function: ease-out;
+	border-left: 10px solid transparent;
+	border-top: 10px solid transparent;
+	display: block;
+	margin-left: 40px;
+	margin-right: 80%;
+	position: fixed;
+	width: 269px;
+}
+
+@keyframes img {
+	from {
+		transform: translateX(-500px);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.brownBox {
+	background-image: url("images/headerBackground.jpg");
+	background-size: cover;
+	border-bottom: 1px solid black;
+	height: 155px;
+	margin-bottom: 160px;
+	position: fixed;
+	width: 100vw;
+	z-index: 100;
+}
+
+div.header {
+	height: 215px;
+}
+
+.mainContentLink {
+	position: absolute;
+}
+
+/* menu */
+.nav {
+	animation-duration: 0.5s;
+	animation-name: nav;
+	animation-timing-function: ease-out;
+	font-family: "courier new";
+	font-weight: bold;
+	margin-top: -16px;
+	max-width: 280px;
+	min-width: 269px;
+	position: fixed;
+	text-shadow: 2px 2px black;
+	width: 75%;
+}
+
+@keyframes nav {
+	from {
+		transform: translateX(-500px);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+li a {
+	background-color: #002868;
+	border-left: 4px solid white;
+	border-right: 4px solid white;
+	border-top: 4px solid white;
+	box-shadow: inset 0 0 12px rgba(0, 0, 0, 1);
+	color: white;
+	display: block;
+	padding: 12px;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+li a.nonActiveNav:hover {
+	background-color: white;
+	box-shadow: 0 0 18px rgba(255, 255, 255);
+	color: black;
+	text-shadow: 0px 0px;
+	transform: translateX(5px);
+}
+
+ul li:first-child > a {
+	border-radius: 15px 15px 0px 0px;
+}
+
+ul li:last-child > a {
+	border-bottom: 4px solid white;
+	border-radius: 0px 0px 15px 15px;
+}
+
+a.activeNav {
+	background-color: #bf0a30;
+	text-shadow: 1px 1px black;
+}
+
+li {
+	list-style: none;
+}
+ ul {
+	width: 100%;
+}
+
+/* contenu */
+div.grid {
+	animation-duration: 1.5s;
+	animation-name: grid;
+	display: grid;
+	grid-auto-rows: 30vh;
+	grid-gap: 2vw 15vw;
+	grid-template-columns: 4fr 12fr;
+	margin-right: 10vw;
+}
+
+.divParagraphe,
+.msgDiv,
+.playerNameDiv,
+.divForum,
+.divInventaire {
+	background-color: black;
+	border: 4px solid white;
+	border-radius: 15px;
+	color: white;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 1.1em;
+	overflow: auto;
+	text-align: center;
+}
+
+.divParagraphe {
+	animation-duration: 0.7s;
+	animation-name: gridAnim;
+	animation-timing-function: ease-out;
+	height: 120%;
+	padding: 30px;
+}
+
+.divParagraphe.histoire > p {
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	line-height: 1.2em;
+	text-align: justify;
+}
+
+@keyframes gridAnim {
+	from {
+		transform: translateX(1000px);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+
+div::-webkit-scrollbar {
+	width: 20px;
+}
+
+div::-webkit-scrollbar-thumb {
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+	outline: 1px solid black;
+}
+
+td > img {
+	margin: auto 4px;
+	width: 10px;
+}
+
+/* footer */
+footer {
+	background-image: url("images/headerBackground.jpg");
+	background-size: cover;
+	border-top: 1px solid black;
+	bottom: 0px;
+	color: darkgreen;
+	height: 25px;
+	font-weight: bold;
+	text-shadow: 1px 1px black;
+	text-align: center;
+	position: fixed;
+	width: 100vw;
+}
+
+/* animation out */
+.out {
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+	animation-name: gridAnimOut;
+}
+
+@keyframes gridAnimOut {
+	from {
+		transform: translateX(0px);
+	}
+	to {
+		transform: translateX(2000px);
+	}
+}
+
+.navOut {
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-name: navOut;
+}
+
+@keyframes navOut {
+	from {
+		transform: translateX(0px);
+	}
+	to {
+		transform: translateX(-500px);
+	}
+}
+
+.imgOut {
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-name: imgOut;
+}
+
+@keyframes imgOut {
+	from {
+		transform: translateX(0px);
+	}
+	to {
+		transform: translateX(-500px);
+	}
+}
+
+/* popup */
+.popupBg,
+.popupBg2 {
+	background: rgba(0, 0, 0, 0.8);
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 9000;
+}
+
+.popupBg .helper,
+.popupBg2 .helper {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.popupBg > div,
+.popupBg2 > div {
+	animation: pulse 6s infinite linear;
+	background-color: black;
+	border-radius: 8px;
+	box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+	display: inline-block;
+	margin: auto;
+	max-height: 75%;
+	max-width: 551px;
+	min-height: 100px;
+	overflow-y: scroll;
+	padding: 15px 50px 30px 50px;
+	vertical-align: middle;
+	width: 60%;
+}
+
+.popupBg > div {
+	overflow: auto;
+}
+
+@keyframes pulse {
+	0% {box-shadow: 10px 10px 60px #002868;}
+	33%{box-shadow: 10px 10px 60px white;}
+	66%{box-shadow: 10px 10px 60px red;}
+	100%{box-shadow: 10px 10px 60px #002868;}
+}
+
+.popupCloseButton {
+	background-color: #002868;
+	border: 3px solid #ccc;
+	border-radius: 50px;
+	color: white;
+	cursor: pointer;
+	font-family: arial;
+	font-size: 25px;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+	margin-left: -60px;
+	margin-top: -25px;
+	position: fixed;
+	text-align: center;
+	width: 30px;
+	z-index: 10000;
+}
+
+.popupCloseButton:hover {
+	background-color: #bf0a30;
+}
+
+.gridDisplay {
+	display: grid;
+}
+
+.hideDisplay {
+	display: none;
+}
+
+/* media queries */
+@media only screen and (max-width: 1300px), (max-height: 750px) {
+	div.grid {
+		display: contents;
+		min-height: 100vh;
+		width: 100%;
+	}
+
+	.nav,
+	 .navOut,
+	 .home,
+	 .imgOut,
+	 .divParagraphe,
+	 .divParagrapheOut {
+		animation: none;
+	}
+
+	.divParagraphe {
+		margin: 2em auto 2em auto;
+		width: 80%;
+	}
+
+	.home,
+	 .nav {
+		margin: auto;
+	}
+
+	.nav {
+		left: -34px;
+		margin-top: -16px;
+	}
+
+	.nav,
+	 .home,
+	 .brownBox,
+	 .divInventaire,
+	 .navOut,
+	 .imgOut {
+		position: relative;
+	}
+}
